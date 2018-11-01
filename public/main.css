@@ -1,0 +1,104 @@
+* + * {
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+article {
+  width: 90%;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  width: 80%;
+  text-align: center;
+  margin: 10px auto;
+  border-bottom: 5px solid red;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h2 + p {
+  padding-left: 5px;
+}
+
+div {
+  font-size: 1.3em;
+  font-face: "Open Sans", tahoma, sans-serif;
+}
+
+h2 ~ div {
+  border: 1px dotted grey;
+  border-radius: 0 5px;
+  box-shadow: inset 0px 0px 20px 3px darkgrey;
+  min-height: 2em;
+  padding: 8px;
+  margin-left: -8px;
+}
+
+.container {
+  position: relative;
+}
+
+/*  +++++++++++++++++++++++++++++++++++++++++++++
+    ========= Coding for Challenges =============
+    +++++++++++++++++++++++++++++++++++++++++++++ */
+
+// Media-Objects
+.stars_wrapper p {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3px;
+  z-index: 10;
+  }
+
+.star-rating {
+  background-color: red;
+  box-sizing: border-box;
+  height: 25px;
+  width: 125px;
+  position: relative;
+  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+  background-size: contain;
+  margin: 15px auto;
+  z-index: 1;
+  overflow: overflow-hidden;
+}
+.star-rating input {
+    display: none;
+    // width: 20%;
+    // height: 100%;
+    // position: relative;
+    // z-index: 2;
+  }
+.star-rating label {
+    background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');  
+    background-size: contain;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left: 0;      
+  }
+
+.star-rating input + label:hover, .star-rating input:checked + label {
+      opacity: 1;
+    }
+.star-rating label { width: 20%; z-index: 7;}
+
+.star-rating  label ~ label {width: 40%; z-index: 6;}
+
+.star-rating  label ~ label ~ label { width: 60%; z-index: 5;}
+    
+.star-rating  label ~ label ~ label ~ label { width: 80%; z-index: 4;}
+
+.star-rating  label ~ label ~ label~ label ~ label  { width: 100%; z-index: 3;}
